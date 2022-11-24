@@ -38,7 +38,10 @@ const Produto = database.sequelize.define('produto', {
     },
     preco_produto: {
         type: Sequelize.STRING,
-    }   
+    },
+    quantidade_produto: {
+        type: Sequelize.STRING,
+    }     
     },{
     timestamps: false
     }
