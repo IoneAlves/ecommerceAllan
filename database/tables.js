@@ -40,7 +40,7 @@ const Produto = database.sequelize.define('produto', {
         type: Sequelize.STRING,
     },
     quantidade_produto: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
     }     
     },{
     timestamps: false
@@ -60,7 +60,7 @@ const Compra = database.sequelize.define('compra', {
         type: Sequelize.STRING,
     },
     quantidade_compra: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
     }   
     },{
     timestamps: false
@@ -68,8 +68,8 @@ const Compra = database.sequelize.define('compra', {
 );
 
 // Criar a tabela
-// Cliente.sync({force: true})
-// Produto.sync({force: true})
-// Compra.sync({force: true})
+Cliente.sync({force: true})
+Produto.sync({force: true})
+Compra.sync({force: true})
 
 module.exports = {Cliente , Produto, Compra}
